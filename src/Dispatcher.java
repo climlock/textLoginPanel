@@ -3,13 +3,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Dispatcher {
+    static List<User> Users = new ArrayList<>();
     static public void main (String[] args){
         interface1();
 
 
     }
     static public void interface1(){
-        List<User> Users = new ArrayList<>();
+
         System.out.println("---------------------------------------------");
         System.out.println("            Enter your action:               ");
         System.out.println("             1 - Login                       ");
@@ -58,8 +59,8 @@ public class Dispatcher {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         for (User temp: Users) {
             System.out.println(temp.getLogin());
-            if (temp.getLogin().equals(login) && temp.getPassword().equals(password)) {
-                System.out.println("ZAEBIS");
+            System.out.println("WORK!!!!!!!");
+            if ((temp.getLogin()).equals(login) && (temp.getPassword()).equals(password)) {
                 return temp;
             }
         }
@@ -77,7 +78,7 @@ public class Dispatcher {
     }
     public static void interface2(User User){
         System.out.println("---------------------------------------------");
-        System.out.println("Hello " + User);
+        System.out.println("Hello " + User.getLogin());
         System.out.println("---------------------------------------------");
     }
 
